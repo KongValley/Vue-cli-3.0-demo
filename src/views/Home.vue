@@ -1,18 +1,40 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="g-home-cnt">
+    <icon-font icon="like" :size="Number(50)" color="#42b983"></icon-font>
+    <router-link 
+      class="cnt-a"
+      v-for="router in routerMap" 
+      :key="router.path" 
+      :to="router.path">
+        {{router.name}}
+    </router-link>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import { routerMap } from "@/router";
 export default {
   name: "home",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      routerMap: routerMap
+    };
   }
 };
 </script>
+<style lang="scss">
+.g-home-cnt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .cnt-a {
+    color: #42b983;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+</style>
