@@ -1,6 +1,6 @@
 <template>
     <div>
-      加载完毕就能看到我了
+      全局loading样式
     </div>
 </template>
 
@@ -18,7 +18,8 @@ export default {
         resolve();
       });
     }, 3000);
-  }
+  },
+  methods: {}
 };
 </script>
 

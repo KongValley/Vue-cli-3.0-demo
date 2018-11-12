@@ -1,12 +1,12 @@
 <template>
   <div class="g-home-cnt">
-    <icon-font icon="like" :size="Number(50)" color="#42b983"></icon-font>
+    <k-icon icon="smile" icon-class="cnt-logo"></k-icon>
     <router-link 
       class="cnt-a"
       v-for="router in routerMap" 
       :key="router.path" 
       :to="router.path">
-        {{router.name}}
+        {{router.name}}组件
     </router-link>
   </div>
 </template>
@@ -35,6 +35,12 @@ export default {
     text-decoration: none;
     font-size: 24px;
     text-align: center;
+    height: 50px;
+    line-height: 50px;
+  }
+  .cnt-logo {
+    font-size: 150px;
+    color: #42b983;
   }
 }
 </style>

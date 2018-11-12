@@ -4,12 +4,12 @@ import router from "./router";
 import store from "./store";
 import "normalize.css";
 import "@/scss/index.scss";
-import IconFont from "@/components/icon-font";
+import kIcon from "@/components/icon";
 
 Vue.config.productionTip = false;
 
 // 注册为全局组件
-Vue.component("icon-font", IconFont);
+Vue.component("k-icon", kIcon);
 
 new Vue({
   router,

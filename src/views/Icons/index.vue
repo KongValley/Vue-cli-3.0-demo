@@ -1,6 +1,6 @@
 <template>
   <div>
-    <icon-font icon="lock" :size="Number(20)"></icon-font>
+    <k-icon icon="smile"></k-icon>
   </div>
 </template>
 

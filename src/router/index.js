@@ -3,8 +3,8 @@ import Router from "vue-router";
 
 const Home = () => import("@/views/Home.vue");
 const About = () => import("@/views/About.vue");
-const Icon = () => import("@/views/Icon.vue");
-const Loading = () => import("@/views/Loading");
+const Icon = () => import("@/views/Icons");
+// const Loading = () => import("@/views/Loading");
 Vue.use(Router);
 
 export const routerMap = [
@@ -22,12 +22,12 @@ export const routerMap = [
     path: "/icon-font",
     name: "icon",
     component: Icon
-  },
-  {
-    path: "/loading",
-    name: "loading",
-    component: Loading
   }
+  // {
+  //   path: "/loading",
+  //   name: "loading",
+  //   component: Loading
+  // }
 ];
 
 export default new Router({

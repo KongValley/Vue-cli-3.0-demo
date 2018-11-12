@@ -1,17 +1,12 @@
 <template>
   <div id="app">
     <router-view/>
-    <k-loading></k-loading>
   </div>
 </template>
 
 <script>
-import KLoading from "@/components/loading";
 export default {
-  name: "App",
-  components: {
-    KLoading
-  }
+  name: "App"
 };
 </script>
 
