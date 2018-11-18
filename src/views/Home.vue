@@ -23,6 +23,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "@/scss/variable.scss";
 .g-home-cnt {
   width: 100%;
   height: 100%;
@@ -31,7 +32,7 @@ export default {
   justify-content: center;
   align-items: center;
   .cnt-a {
-    color: #42b983;
+    color: $green;
     text-decoration: none;
     font-size: 24px;
     text-align: center;
@@ -40,7 +41,7 @@ export default {
   }
   .cnt-logo {
     font-size: 150px;
-    color: #42b983;
+    color: $green;
   }
 }
 </style>

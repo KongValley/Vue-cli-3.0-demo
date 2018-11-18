@@ -4,6 +4,7 @@ import Router from "vue-router";
 const Home = () => import("@/views/Home.vue");
 const About = () => import("@/views/About.vue");
 const Icon = () => import("@/views/Icons");
+const Slides = () => import("@/views/Slides");
 // const Loading = () => import("@/views/Loading");
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export const routerMap = [
     path: "/icon-font",
     name: "icon",
     component: Icon
+  },
+  {
+    path: "/slides",
+    name: "slides",
+    component: Slides
   }
   // {
   //   path: "/loading",
