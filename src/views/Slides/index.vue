@@ -18,7 +18,7 @@
 import KSlides from "@/components/slides";
 import KSlidesItem from "@/components/slides-item";
 export default {
-  name: "",
+  name: "slides_page",
   components: {
     KSlides,
     KSlidesItem

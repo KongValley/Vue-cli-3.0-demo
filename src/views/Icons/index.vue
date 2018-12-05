@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "icon_page",
   data() {
     return {};
   }

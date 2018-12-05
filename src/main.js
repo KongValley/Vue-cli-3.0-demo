@@ -3,9 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "normalize.css";
-import "@/scss/index.scss";
+import "@/style/index.scss";
 import kIcon from "@/components/icon";
 
+
+// 设置为生产环境下不提示
 Vue.config.productionTip = false;
 
 // 注册为全局组件
