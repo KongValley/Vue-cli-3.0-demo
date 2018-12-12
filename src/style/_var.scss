@@ -3,14 +3,24 @@ $border-color-hover: #666;
 $border-color-light: lighten($border-color, 30%);
 $border-radius: 4px;
 
+$box-shadow-color: rgba(0, 0, 0, 0.5);
+
 $button-bg: white;
 $button-active-bg: #eee;
+$button-height: 32px;
 
 $input-height: 32px;
+$input-radius: 4px;
 
 $font-size: 14px;
 
+/* normal color */
+$color: #333;
+/* success color */
 $green: #42B983;
+/* error color */
+$red: #F1453D;
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }

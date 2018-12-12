@@ -17,10 +17,14 @@
 </template>
 
 <script>
+import KIcon from "_c/icon";
 export default {
-  name: "button",
+  name: "k-button",
   data() {
     return {};
+  },
+  components: {
+    KIcon
   },
   props: {
     icon: {

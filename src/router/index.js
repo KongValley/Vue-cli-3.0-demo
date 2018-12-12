@@ -3,7 +3,8 @@ import Router from "vue-router";
 
 const Home = () => import("@/views/Home.vue");
 const Icon = () => import("@/views/Icons");
-const Slides = () => import("@/views/Slides");
+// const Slides = () => import("@/views/Slides");
+const Button = () => import("@/views/Button");
 
 Vue.use(Router);
 
@@ -18,10 +19,15 @@ export const routerMap = [
     name: "icon",
     component: Icon
   },
+  // {
+  //   path: "/slides",
+  //   name: "slides",
+  //   component: Slides
+  // }
   {
-    path: "/slides",
-    name: "slides",
-    component: Slides
+    path: "/button",
+    name: "button",
+    component: Button
   }
   // {
   //   path: "/loading",

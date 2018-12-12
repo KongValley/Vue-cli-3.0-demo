@@ -7,7 +7,7 @@
 <script>
 import "@/assets/font/iconfont.js";
 export default {
-  name: "icon",
+  name: "k-icon",
   data() {
     return {};
   },
