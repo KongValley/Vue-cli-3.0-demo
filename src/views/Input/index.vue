@@ -1,6 +1,8 @@
 <template>
   <div class="input-page-g">
-
+    <div class="title">v-model测试</div>
+    <k-input v-model="data"></k-input>
+    <div class="result">{{data}}</div>
   </div>
 </template>
 
@@ -9,7 +11,9 @@ import KInput from "@/components/input";
 export default {
   name: "",
   data() {
-    return {};
+    return {
+      data: ""
+    };
   },
   components: {
     KInput
@@ -19,5 +23,6 @@ export default {
 
 <style lang="scss" scoped>
 .input-page-g {
+  padding-left: 10px;
 }
 </style>

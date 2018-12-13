@@ -52,12 +52,15 @@ export default {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+
   &:hover {
     border-color: $border-color-hover;
   }
+
   &:active {
     background-color: $button-active-bg;
   }
+
   &:focus {
     outline: none;
   }

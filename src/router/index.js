@@ -5,6 +5,7 @@ const Home = () => import("@/views/Home.vue");
 const Icon = () => import("@/views/Icons");
 // const Slides = () => import("@/views/Slides");
 const Button = () => import("@/views/Button");
+const Input = () => import("@/views/Input");
 
 Vue.use(Router);
 
@@ -12,12 +13,18 @@ export const routerMap = [
   {
     path: "/",
     name: "home",
-    component: Home
+    component: Home,
+    meta: {
+      title: "首页"
+    }
   },
   {
     path: "/icon-font",
     name: "icon",
-    component: Icon
+    component: Icon,
+    meta: {
+      title: "icon组件"
+    }
   },
   // {
   //   path: "/slides",
@@ -27,13 +34,19 @@ export const routerMap = [
   {
     path: "/button",
     name: "button",
-    component: Button
+    component: Button,
+    meta: {
+      title: "button组件"
+    }
+  },
+  {
+    path: "/input",
+    name: "input",
+    component: Input,
+    meta: {
+      title: "input组件"
+    }
   }
-  // {
-  //   path: "/loading",
-  //   name: "loading",
-  //   component: Loading
-  // }
 ];
 
 export default new Router({
