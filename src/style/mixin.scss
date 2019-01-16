@@ -1,3 +1,4 @@
+@import "var";
 @mixin scrollBar {
   &::-webkit-scrollbar-track-piece {
     background: #d3dce6;
@@ -8,5 +9,35 @@
   &::-webkit-scrollbar-thumb {
     background: #99a9bf;
     border-radius: 20px;
+  }
+}
+
+@mixin statusBgColor {
+  .is {
+    &-success {
+      &-bg {
+        background-color: $color-success;
+      }
+    }
+    &-error {
+      &-bg {
+        background-color: $color-danger;
+      }
+    }
+  }
+}
+
+@mixin statusTextColor {
+  .is {
+    &-success {
+      &-text {
+        color: $color-success;
+      }
+    }
+    &-error {
+      &-text {
+        color: $color-danger;
+      }
+    }
   }
 }

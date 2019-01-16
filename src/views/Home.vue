@@ -23,7 +23,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/style/_var.scss";
+@import "~@/style/_var.scss";
 .g-home-cnt {
   width: 100%;
   height: 100%;

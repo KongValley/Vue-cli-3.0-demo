@@ -1,29 +1,48 @@
-/* border 变量 */
+/* global color */
+$color: #333;
+$color-primary: #1890ff;
+$color-success: #13ce66;
+$color-danger: #f5222d;
+$color-text-inner: #fff;
+$color-text-outer: #606266;
+$green: #42B983;
+$red: #F1453D;
+/*
+  border 变量
+ */
 $border-color: #D9D9D9;
 $border-color-hover: #666;
 $border-color-light: lighten($border-color, 30%);
 $border-radius: 4px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
-/* button 变量 */
-$button-bg: white;
-$button-active-bg: #eee;
+/*
+  button 变量
+ */
+$button-bg: #1890ff;
+$button-hover: lighten($button-bg, 30%);
+$button-active-bg: darken($button-bg, 30%);
 $button-height: 32px;
-/* input 变量 */
+/*
+  input 变量
+ */
 $input-height: 22px;
 $input-radius: 4px;
 $input-border-color-hover: #40a9ff;
-$input-active-showdow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+$input-active-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
 $input-selection-bg: #1890FF;
 $font-size: 14px;
-/* normal color */
 
-$color: #333;
-/* success color */
+/*
+  progress 变量
+ */
+$progress-wrapper: #dfdfdf;
+$progress-radius: 100px;
+$progress-loading-color: $color-primary;
+$progress-success-color: $color-success;
+$progress-danger-color: $color-danger;
+$progress-innerText-color: $color-text-inner;
+$progress-text-color: $color-text-outer;
 
-$green: #42B983;
-/* error color */
-
-$red: #F1453D;
 @keyframes spin {
   0% {
     transform: rotate(0deg);

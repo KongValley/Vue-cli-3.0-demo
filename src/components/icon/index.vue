@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .k-icon {
   width: 1em;
   height: 1em;

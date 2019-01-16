@@ -1,11 +1,13 @@
 <template>
   <div class="wrapper" :class="{error}">
-    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
-      @change="$emit('change',$event.target.value)"
-      @input="$emit('input',$event.target.value)"
-      @focus="$emit('focus',$event.target.value)"
-      @blur="$emit('blur',$event.target.value)"
-    >
+    <label>
+      <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+        @change="$emit('change',$event.target.value)"
+        @input="$emit('input',$event.target.value)"
+        @focus="$emit('focus',$event.target.value)"
+        @blur="$emit('blur',$event.target.value)"
+      >
+    </label>
     <template v-if="error">
       <k-icon icon="error" class="icon-error"></k-icon>
       <span class="errorMessage">{{error}}</span>
@@ -40,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/style/_var.scss";
+@import "~@/style/_var.scss";
 .wrapper {
   font-size: $font-size;
   display: inline-flex;
@@ -65,7 +67,7 @@ export default {
     }
 
     &:focus {
-      box-shadow: $input-active-showdow;
+      box-shadow: $input-active-shadow;
       outline: none;
     }
 

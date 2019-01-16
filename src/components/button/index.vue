@@ -38,8 +38,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "@/style/_var.scss";
+<style lang="scss" rel="stylesheet/scss" scoped>
+@import "~@/style/_var.scss";
 .k-button {
   font-size: $font-size;
   height: $button-height;
