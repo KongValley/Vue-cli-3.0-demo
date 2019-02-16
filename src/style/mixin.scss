@@ -1,4 +1,72 @@
 @import "var";
+@import "common/function";
+
+/* BEM
+ -------------------------- */
+@mixin b($block) {
+  $B: $namespace+'-'+$block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+/*
+  包装伪类，使用 @at-root 重置 & 读取次数的计数
+ */
+@mixin pseudo($pseudo) {
+  @at-root #{&}#{':#{$pseudo}'} {
+    @content
+  }
+}
+
+
 @mixin scrollBar {
   &::-webkit-scrollbar-track-piece {
     background: #d3dce6;
@@ -9,35 +77,5 @@
   &::-webkit-scrollbar-thumb {
     background: #99a9bf;
     border-radius: 20px;
-  }
-}
-
-@mixin statusBgColor {
-  .is {
-    &-success {
-      &-bg {
-        background-color: $color-success;
-      }
-    }
-    &-error {
-      &-bg {
-        background-color: $color-danger;
-      }
-    }
-  }
-}
-
-@mixin statusTextColor {
-  .is {
-    &-success {
-      &-text {
-        color: $color-success;
-      }
-    }
-    &-error {
-      &-text {
-        color: $color-danger;
-      }
-    }
   }
 }

@@ -38,7 +38,7 @@ export default {
 };
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" scoped>
 @import "~@/style/_var.scss";
 .k-button {
   font-size: $font-size;

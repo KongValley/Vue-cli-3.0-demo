@@ -6,7 +6,7 @@ const Icon = () => import("_v/Icons");
 // const Slides = () => import("@/views/Slides");
 const Button = () => import("_v/Button");
 const Input = () => import("_v/Input");
-const Progress = () => import("_v/Progress");
+// const Progress = () => import("_v/Progress");
 
 Vue.use(Router);
 
@@ -48,14 +48,14 @@ export const routerMap = [
       title: "input组件"
     }
   },
-  {
-    path: "/progress",
-    name: "progress",
-    component: Progress,
-    meta: {
-      title: "progress组件"
-    }
-  }
+  // {
+  //   path: "/progress",
+  //   name: "progress",
+  //   component: Progress,
+  //   meta: {
+  //     title: "progress组件"
+  //   }
+  // }
 ];
 
 export default new Router({
